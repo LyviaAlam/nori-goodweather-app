@@ -15,19 +15,22 @@
 
   <div class="nori-container">
     <header>
-      <input
-        type="search"
-        placeholder="Enter a city name..."
-        style="color: white"
-        required
-        class="nori-search-form"
-      />
-      <input type="submit" value="Search" class="nori-search-button" />
+      <form id="nori-search">
+        <input
+          type="search"
+          placeholder="Enter a city name..."
+          style="color: white"
+          required
+          class="nori-search-form"
+          id="nori-search-form"
+        />
+        <input type="submit" value="Search" class="nori-search-button" />
+      </form>
     </header>
 
     <div class="nori-body-text">
       <div>
-        <h1 class="nori-main-city">Sydney</h1>
+        <h1 class="nori-main-city" id="nori-main-city">Sydney</h1>
         <p class="nori-weather-detail">
           Saturday 15:32, moderate rain
           <br />
@@ -55,4 +58,5 @@
       >
     </footer>
   </div>
+  <script src="src/java.js"></script>
 </html>
