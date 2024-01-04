@@ -3,28 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Nori Good Weather App</title>
   </head>
-  <header>
-    <input type="search" placeholder="Enter a city name..." />
-    <input type="submit" />
-  </header>
-  <h1>Sydney</h1>
-  <body>
-    <p>
-      Saturday 15:32,
-      <br />
-      moderate rain Humidity: 87%, Wind: 7.2km/h
-      <br />
-      🌞 14°C
-    </p>
-  </body>
-  <footer>
-    This project was coded by
-    <a href="https://github.com/LyviaAlam" target="_blank">Lyvia Alam</a>, is on
-    <a href="https://github.com/LyviaAlam/nori-goodweather-app" target="_blank"
-      >Github</a
-    >and hosted on
-    <a href="https://nori-goodweather.netlify.app/" target="_blank">Netlify</a>
-  </footer>
+
+  <div class="nori-container">
+    <header>
+      <input
+        type="search"
+        placeholder="Enter a city name..."
+        style="color: white"
+        required
+        class="nori-search-form"
+      />
+      <input type="submit" value="Search" class="nori-search-button" />
+    </header>
+
+    <div class="nori-body-text">
+      <div>
+        <h1 class="nori-main-city">Sydney</h1>
+        <p class="nori-weather-detail">
+          Saturday 15:32, moderate rain
+          <br />
+          Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+        </p>
+      </div>
+      <div class="nori-main-temperature">
+        <div class="nori-main-icon">🌞</div>
+        <div class="nori-main-number">32</div>
+        <div class="nori-main-unit">°C</div>
+      </div>
+    </div>
+    <footer>
+      This project was coded by
+      <a href="https://github.com/LyviaAlam" target="_blank">Lyvia Alam</a>, is
+      on
+      <a
+        href="https://github.com/LyviaAlam/nori-goodweather-app"
+        target="_blank"
+        >Github</a
+      >
+      and hosted on
+      <a href="https://nori-goodweather.netlify.app/" target="_blank"
+        >Netlify</a
+      >
+    </footer>
+  </div>
 </html>

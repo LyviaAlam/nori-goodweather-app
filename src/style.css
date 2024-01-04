@@ -1,0 +1,89 @@
+body {
+  background-color: #fbf0e6;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  border-bottom: 0.3px solid #937963;
+  padding-bottom: 40px;
+}
+
+p {
+  color: #937963;
+  padding-bottom: 40px;
+}
+p strong {
+  color: #e18f2c;
+}
+footer {
+  border-top: 0.3px solid #937963;
+  padding-top: 40px;
+  color: #91765f;
+  font-size: 14px;
+  text-align: center;
+}
+
+.nori-container {
+  background-color: white;
+  max-width: 600px;
+  margin: 45px auto;
+  border-style: none;
+  border-radius: 15px;
+  padding: 40px;
+}
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+.nori-search-form {
+  background-color: #d9c0a9;
+  border: none;
+  border-radius: 6px;
+  width: 80%;
+  font-size: 16px;
+  padding: 15px 20px;
+}
+
+.nori-search-button {
+  background: #937963;
+  padding: 15px 30px;
+  border: none;
+  font-size: 16px;
+  margin-left: 5px;
+  border-radius: 6px;
+  color: white;
+}
+
+.nori-main-city {
+  font-size: 60px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  color: #614f40;
+}
+
+.nori-body-text {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nori-main-temperature {
+  margin-top: 50px;
+  display: flex;
+}
+.nori-main-icon {
+  font-size: 55px;
+  margin-right: 10px;
+}
+.nori-main-number {
+  font-size: 70px;
+  line-height: 80px;
+  font-weight: 500;
+  color: #614f40;
+}
+.nori-main-unit {
+  font-size: 28px;
+  margin-top: 4px;
+  font-weight: 500;
+  color: #614f40;
+}
