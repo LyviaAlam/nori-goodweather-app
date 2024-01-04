@@ -68,22 +68,23 @@ footer {
 }
 
 .nori-main-temperature {
-  margin-top: 50px;
+  margin-top: 45px;
   display: flex;
 }
 .nori-main-icon {
-  font-size: 55px;
   margin-right: 10px;
+  width: 100px;
+  height: 100px;
 }
 .nori-main-number {
   font-size: 70px;
-  line-height: 80px;
+  line-height: 100px;
   font-weight: 500;
   color: #614f40;
 }
 .nori-main-unit {
   font-size: 28px;
-  margin-top: 4px;
+  margin-top: 12px;
   font-weight: 500;
   color: #614f40;
 }

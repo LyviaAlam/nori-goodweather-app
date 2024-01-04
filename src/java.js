@@ -7,14 +7,15 @@ function updateNoriWeather(noriResponse) {
   let noriHumidity = document.querySelector("#nori-humidity");
   let noriTime = document.querySelector("#nori-time");
   let updateDate = new Date(noriResponse.data.time * 1000);
+  let noriIcon = document.querySelector("#nori-main-icon");
 
   cityInput.innerHTML = noriResponse.data.city;
   noriMainTemp.innerHTML = Math.round(temperature);
   noriCondition.innerHTML = noriResponse.data.condition.description;
   noriWind.innerHTML = `${noriResponse.data.wind.speed}km/h`;
   noriHumidity.innerHTML = `${noriResponse.data.temperature.humidity}%`;
-
   noriTime.innerHTML = formatDate(updateDate);
+  noriIcon.innerHTML = `<img src="${noriResponse.data.condition.icon_url}"/>`;
 }
 
 function formatDate(updateDate) {
