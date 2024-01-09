@@ -81,7 +81,8 @@ function updateForecast(forecastResponse) {
       <span class="nori-forecast-temp-max">${Math.round(
         day.temperature.maximum
       )}°</span>
-      <span class="nori-forecast-temp-min">${Math.round(
+      <span>|<span>
+      <span class="nori-forecast-temp-min"> ${Math.round(
         day.temperature.minimum
       )}°</span>
     </div>
