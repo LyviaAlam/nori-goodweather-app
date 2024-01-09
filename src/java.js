@@ -16,6 +16,8 @@ function updateNoriWeather(noriResponse) {
   noriHumidity.innerHTML = `${noriResponse.data.temperature.humidity}%`;
   noriTime.innerHTML = formatDate(updateDate);
   noriIcon.innerHTML = `<img src="${noriResponse.data.condition.icon_url}"/>`;
+
+  apiForecast(noriResponse.data.city);
 }
 
 function formatDate(updateDate) {
@@ -53,7 +55,15 @@ function noriHandleSearch(event) {
   noriSearchCity(noriInput.value);
 }
 
-function updateForecast() {
+function apiForecast(forecastCity) {
+  let apiKey = "143af7fd5b08cab06a8bf5bo4f3btde9";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${forecastCity}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(updateForecast);
+}
+
+function updateForecast(forecastResponse) {
+  console.log(forecastResponse.data);
+
   let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastAdd = "";
 
