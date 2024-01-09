@@ -111,8 +111,8 @@ footer {
 }
 
 .nori-forecast-icon {
-  margin-bottom: 10px;
-  font-size: 40px;
+  margin: 0 auto;
+  display: block;
 }
 .nori-forecast-temp {
   display: flex;
@@ -123,4 +123,7 @@ footer {
 .nori-forecast-temp-max {
   font-weight: bold;
   padding: 0 10px;
+}
+.nori-forecast-temp-min {
+  padding-right: 10px;
 }

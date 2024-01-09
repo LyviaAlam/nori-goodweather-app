@@ -55,6 +55,12 @@ function noriHandleSearch(event) {
   noriSearchCity(noriInput.value);
 }
 
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+
 function apiForecast(forecastCity) {
   let apiKey = "143af7fd5b08cab06a8bf5bo4f3btde9";
   let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${forecastCity}&key=${apiKey}&units=metric`;
@@ -62,22 +68,25 @@ function apiForecast(forecastCity) {
 }
 
 function updateForecast(forecastResponse) {
-  console.log(forecastResponse.data);
-
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
   let forecastAdd = "";
 
-  days.forEach(function (day) {
-    forecastAdd =
-      forecastAdd +
-      `<div class="nori-forecast-container">
-    <div class="nori-forecast-day">${day}</div>
-    <div class="nori-forecast-icon">🌥️</div>
+  forecastResponse.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastAdd =
+        forecastAdd +
+        `<div class="nori-forecast-container">
+    <div class="nori-forecast-day">${formatDay(day.time)}</div>
+    <div class="nori-forecast-icon"><img src="${day.condition.icon_url}"/></div>
     <div class="nori-forecast-temp">
-      <span class="nori-forecast-temp-max">25°</span>
-      <span class="nori-forecast-temp-min">18°</span>
+      <span class="nori-forecast-temp-max">${Math.round(
+        day.temperature.maximum
+      )}°</span>
+      <span class="nori-forecast-temp-min">${Math.round(
+        day.temperature.minimum
+      )}°</span>
     </div>
   </div>`;
+    }
   });
 
   let forecastContent = document.querySelector("#nori-forecast");
