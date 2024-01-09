@@ -53,7 +53,29 @@ function noriHandleSearch(event) {
   noriSearchCity(noriInput.value);
 }
 
+function updateForecast() {
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri"];
+  let forecastAdd = "";
+
+  days.forEach(function (day) {
+    forecastAdd =
+      forecastAdd +
+      `<div class="nori-forecast-container">
+    <div class="nori-forecast-day">${day}</div>
+    <div class="nori-forecast-icon">🌥️</div>
+    <div class="nori-forecast-temp">
+      <span class="nori-forecast-temp-max">25°</span>
+      <span class="nori-forecast-temp-min">18°</span>
+    </div>
+  </div>`;
+  });
+
+  let forecastContent = document.querySelector("#nori-forecast");
+  forecastContent.innerHTML = forecastAdd;
+}
+
 let noriSearch = document.querySelector("#nori-search");
 noriSearch.addEventListener("submit", noriHandleSearch);
 
 noriSearchCity("Sydney");
+updateForecast();
