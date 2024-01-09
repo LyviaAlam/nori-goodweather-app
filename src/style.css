@@ -30,10 +30,12 @@ footer {
   border-style: none;
   border-radius: 15px;
   padding: 40px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
 }
 ::placeholder {
   color: white;
   opacity: 1;
+  text-align: center;
 }
 .nori-search-form {
   background-color: #d9c0a9;
@@ -52,8 +54,12 @@ footer {
   font-size: 16px;
   border-radius: 6px;
   color: white;
+  width: 18%;
+  text-align: left;
 }
-
+.nori-body-left {
+  padding-left: 25px;
+}
 .nori-main-city {
   font-size: 60px;
   font-weight: 600;
@@ -70,6 +76,7 @@ footer {
 .nori-main-temperature {
   margin-top: 45px;
   display: flex;
+  padding-right: 25px;
 }
 .nori-main-icon {
   margin-right: 10px;
@@ -87,4 +94,33 @@ footer {
   margin-top: 12px;
   font-weight: 500;
   color: #614f40;
+}
+.nori-forecast {
+  font-size: 16px;
+  margin: 10px 0px;
+  color: #937963;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.nori-forecast-container {
+  margin-bottom: 30px;
+}
+.nori-forecast-day {
+  margin-bottom: 5px;
+}
+
+.nori-forecast-icon {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+.nori-forecast-temp {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: #e18f2c;
+}
+.nori-forecast-temp-max {
+  font-weight: bold;
+  padding: 0 10px;
 }
